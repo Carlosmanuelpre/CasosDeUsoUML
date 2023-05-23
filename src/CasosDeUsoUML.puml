@@ -1,3 +1,21 @@
+
 @startuml
-:Cliente:
+left to right direction
+ actor Cliente as g
+ actor Restaurante as c
+
+
+ Rectangle  {
+  usecase "Pedir comida" as UC1
+  usecase "Mostrar menu" as UC2
+
+}
+
+g -- UC1
+g -- UC2
+c -- UC2
+c --(Entrear comida)
+
 @enduml
+
+
