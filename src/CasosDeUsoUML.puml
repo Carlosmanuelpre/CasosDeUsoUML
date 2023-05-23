@@ -2,20 +2,16 @@
 @startuml
 left to right direction
  actor Cliente as g
- actor Restaurante as c
 
+ usecase (Cancelar Pedido)
+ usecase (Confirmar Pedido)
 
- Rectangle  {
-  usecase "Pedir comida" as UC1
-  usecase "Mostrar menu" as UC2
+g --(Confirmar Pedido)
+g --(Cancelar Pedido)
+(Devolver cambio)
 
-}
-
-g -- UC1
-g -- UC2
-c -- UC2
-c --(Entrear comida)
-
+(Cancelar Pedido)..(Devolver cambio): include
+(Confirmar Pedido)..(Devolver cambio):include
 @enduml
 
 
