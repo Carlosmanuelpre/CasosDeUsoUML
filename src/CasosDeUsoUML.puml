@@ -1,17 +1,9 @@
 
 @startuml
-left to right direction
- actor Cliente as g
+(Acceder)
+(Registrarme)
 
- usecase (Cancelar Pedido)
- usecase (Confirmar Pedido)
-
-g --(Confirmar Pedido)
-g --(Cancelar Pedido)
-(Devolver cambio)
-
-(Cancelar Pedido)..(Devolver cambio): include
-(Confirmar Pedido)..(Devolver cambio):include
+(Registrarme)..>(Acceder) : extend
 @enduml
 
 
